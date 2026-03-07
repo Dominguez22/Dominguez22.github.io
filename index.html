@@ -7,95 +7,174 @@
 
 <style>
 
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    color:#333;
-    background: linear-gradient(135deg,#eef2f7,#dfe9f3);
+/* GENERAL */
+
+html{
+scroll-behavior:smooth;
 }
 
-.profile{
-    width:180px;
-    border-radius:50%;
-    margin-top:15px;
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
+body{
+font-family: Arial, sans-serif;
+margin:0;
+color:#333;
+background: linear-gradient(135deg,#eef2f7,#dfe9f3);
 }
-    
+
 /* NAVBAR */
 
 nav{
-    background-color:#111;
-    padding:15px;
+background:#111;
+padding:15px;
+position:sticky;
+top:0;
 }
 
 nav a{
-    color:white;
-    margin-right:20px;
-    text-decoration:none;
-    font-weight:bold;
+color:white;
+margin-right:20px;
+text-decoration:none;
+font-weight:bold;
 }
 
 nav a:hover{
-    color:#4da6ff;
+color:#4da6ff;
 }
 
 /* SECTIONS */
 
 section{
-    padding:40px;
+padding:60px 10%;
 }
 
-/* TITLES */
+/* HERO */
+
+.hero{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:500px;
+}
 
 h1{
-    font-size:48px;
+font-size:42px;
+margin-bottom:10px;
 }
 
-h2{
-    font-size:32px;
-    margin-top:20px;
+.subtitle{
+font-size:20px;
+color:#555;
+}
+
+/* PROFILE IMAGE */
+
+.profile{
+width:180px;
+border-radius:50%;
+}
+
+/* BUTTONS */
+
+.button{
+display:inline-block;
+margin-top:15px;
+padding:10px 20px;
+background:#0366d6;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.button2{
+display:inline-block;
+margin-top:15px;
+margin-left:10px;
+padding:10px 20px;
+background:#333;
+color:white;
+text-decoration:none;
+border-radius:6px;
+}
+
+.button:hover{
+background:#024ea2;
+}
+
+.button2:hover{
+background:black;
+}
+
+/* TECH ICONS */
+
+.tech-icons{
+margin-top:20px;
+}
+
+.tech-icons img{
+width:40px;
+margin-right:10px;
+}
+
+/* PROJECT GRID */
+
+.projects-grid{
+display:grid;
+grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+gap:30px;
 }
 
 /* PROJECT CARDS */
 
 .project{
-    background:white;
-    padding:25px;
-    margin-top:25px;
-    border-radius:10px;
-    box-shadow:0px 6px 15px rgba(0,0,0,0.1);
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0px 6px 15px rgba(0,0,0,0.1);
 }
 
 .project img{
-    width:100%;
-    max-width:500px;
-    margin-top:15px;
-    border-radius:8px;
+width:100%;
+border-radius:8px;
+margin-top:15px;
 }
 
-/* LINKS */
+/* LIST SPACING */
 
-.project a{
-    display:inline-block;
-    margin-top:10px;
-    font-size:16px;
-    color:#0366d6;
-}
-
-.project a:hover{
-    text-decoration:underline;
+ul li{
+margin-bottom:8px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#111;
-    color:white;
-    text-align:center;
-    padding:20px;
-    margin-top:40px;
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+/* DARK MODE */
+
+@media (prefers-color-scheme: dark){
+
+body{
+background:#121212;
+color:#e4e4e4;
+}
+
+.project{
+background:#1e1e1e;
+}
+
+nav{
+background:black;
+}
+
 }
 
 </style>
@@ -107,7 +186,7 @@ footer{
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- NAVBAR -->
 
 <nav>
 
@@ -124,16 +203,39 @@ footer{
 
 <section id="home">
 
+<div class="hero">
+
+<img src="images/Perfil.jpg" alt="Mauricio Dominguez" class="profile">
+
+<div class="hero-text">
+
 <h1>Mauricio Dominguez Palacios</h1>
 
-<img src="images/Perfil.jpg" alt="Mauricio Dominguez Palacios" class="profile">
-    
-<p>Data Science & Data Engineering Portfolio</p>
+<p class="subtitle">Data Science & Data Engineering Portfolio</p>
 
 <p>
-Mechatronics engineer transitioning into data science and data engineering.
-Interested in machine learning, data analysis, and building data-driven solutions.
+Mechatronics Engineer transitioning into Data Science and Data Engineering. 
+Interested in machine learning, data analysis, and building scalable data-driven solutions.
 </p>
+
+<a href="#projects" class="button">View Projects</a>
+
+<a href="https://github.com/Dominguez22" class="button2">GitHub</a>
+
+<div class="tech-icons">
+
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
@@ -145,31 +247,25 @@ Interested in machine learning, data analysis, and building data-driven solution
 
 <h2>Projects</h2>
 
-
+<div class="projects-grid">
 
 <div class="project">
 
 <h3>Mobile Plan Classification</h3>
 
 <p>
-Machine learning project that classifies and recommends the most suitable 
-mobile plan (Ultra or Smart) for users based on their usage behavior.
+Machine learning project that classifies and recommends the most suitable mobile plan
+for users based on user behavior data.
 </p>
 
-<h4>Workflow</h4>
-
 <ul>
-<li>Data loading and exploration</li>
-<li>Exploratory Data Analysis (EDA)</li>
-<li>Dataset splitting (training, validation, test)</li>
-<li>Model training: Decision Tree, Random Forest, Logistic Regression</li>
+<li>Exploratory Data Analysis</li>
+<li>Feature Engineering</li>
+<li>Model training (Random Forest, Logistic Regression)</li>
 <li>Hyperparameter tuning</li>
-<li>Model evaluation and selection</li>
 </ul>
 
 <a href="https://github.com/Dominguez22/Mobile-Plan-Classification">View Project</a>
-
-<br>
 
 <img src="images/project1.png">
 
@@ -179,11 +275,11 @@ mobile plan (Ultra or Smart) for users based on their usage behavior.
 
 <div class="project">
 
-<h3>Customer Churn Prediction for Banking Industry</h3>
+<h3>Customer Churn Prediction</h3>
 
 <p>
-Machine learning project that predicts customer churn for Beta Bank,
-allowing the institution to proactively identify customers likely to leave.
+Machine learning project predicting customer churn for Beta Bank to support
+customer retention strategies.
 </p>
 
 <ul>
@@ -195,11 +291,17 @@ allowing the institution to proactively identify customers likely to leave.
 
 <a href="https://github.com/Dominguez22/customer-churn-prediction">View Project</a>
 
-<br>
-
 <img src="images/project2.png">
 
 </div>
+
+</div>
+
+
+
+<h2>More Projects</h2>
+
+<div id="github-projects" class="projects-grid"></div>
 
 </section>
 
@@ -212,10 +314,10 @@ allowing the institution to proactively identify customers likely to leave.
 <h2>About Me</h2>
 
 <p>
-Mechatronics Engineer transitioning into Data Science and Data Engineering. 
-I am interested in building data-driven solutions, machine learning systems, 
-and scalable data pipelines. My work focuses on transforming raw data into 
-actionable insights using modern data tools and cloud technologies.
+Mechatronics Engineer with experience in automation and robotics,
+transitioning into Data Science and Data Engineering. My focus is on
+building scalable data pipelines, machine learning models, and
+cloud-based data solutions.
 </p>
 
 <h3>Technical Skills</h3>
@@ -262,6 +364,36 @@ GitHub:
 <p>© 2026 Mauricio Dominguez</p>
 
 </footer>
+
+
+
+<script>
+
+fetch("https://api.github.com/users/Dominguez22/repos")
+.then(response => response.json())
+.then(data => {
+
+let container = document.getElementById("github-projects");
+
+data.slice(0,4).forEach(repo => {
+
+let project = document.createElement("div");
+
+project.className = "project";
+
+project.innerHTML = `
+<h3>${repo.name}</h3>
+<p>${repo.description || "No description available"}</p>
+<a href="${repo.html_url}" target="_blank">View Repository</a>
+`;
+
+container.appendChild(project);
+
+});
+
+});
+
+</script>
 
 
 
