@@ -1,402 +1,53 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<title>Mauricio | Data Portfolio</title>
-
-<style>
-
-/* GENERAL */
-
-html{
-scroll-behavior:smooth;
-}
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-color:#333;
-background: linear-gradient(135deg,#eef2f7,#dfe9f3);
-}
-
-/* NAVBAR */
-
-nav{
-background:#111;
-padding:15px;
-position:sticky;
-top:0;
-}
-
-nav a{
-color:white;
-margin-right:20px;
-text-decoration:none;
-font-weight:bold;
-}
-
-nav a:hover{
-color:#4da6ff;
-}
-
-/* SECTIONS */
-
-section{
-padding:60px 10%;
-}
-
-/* HERO */
-
-.hero{
-display:flex;
-align-items:center;
-justify-content:center;
-gap:40px;
-flex-wrap:wrap;
-}
-
-.hero-text{
-max-width:500px;
-}
-
-h1{
-font-size:42px;
-margin-bottom:10px;
-}
-
-.subtitle{
-font-size:20px;
-color:#555;
-}
-
-/* PROFILE IMAGE */
-
-.profile{
-width:180px;
-border-radius:50%;
-}
-
-/* BUTTONS */
-
-.button{
-display:inline-block;
-margin-top:15px;
-padding:10px 20px;
-background:#0366d6;
-color:white;
-text-decoration:none;
-border-radius:6px;
-}
-
-.button2{
-display:inline-block;
-margin-top:15px;
-margin-left:10px;
-padding:10px 20px;
-background:#333;
-color:white;
-text-decoration:none;
-border-radius:6px;
-}
-
-.button:hover{
-background:#024ea2;
-}
-
-.button2:hover{
-background:black;
-}
-
-/* TECH ICONS */
-
-.tech-icons{
-margin-top:20px;
-}
-
-.tech-icons img{
-width:40px;
-margin-right:10px;
-}
-
-/* PROJECT GRID */
-
-.projects-grid{
-display:grid;
-grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
-gap:30px;
-}
-
-/* PROJECT CARDS */
-
-.project{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0px 6px 15px rgba(0,0,0,0.1);
-}
-
-.project img{
-width:100%;
-border-radius:8px;
-margin-top:15px;
-}
-
-/* LIST SPACING */
-
-ul li{
-margin-bottom:8px;
-}
-
-/* FOOTER */
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:25px;
-margin-top:40px;
-}
-
-/* DARK MODE */
-
-@media (prefers-color-scheme: dark){
-
-body{
-background:#121212;
-color:#e4e4e4;
-}
-
-.project{
-background:#1e1e1e;
-}
-
-nav{
-background:black;
-}
-
-}
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        body { background-color: #333; color: #fff; font-family: Arial, sans-serif; }
+        h1, h2, h3 { color: #fff; }
+        /* Dark grayscale color scheme */
+    </style>
 </head>
-
-
-
 <body>
-
-
-<!-- NAVBAR -->
-
-<nav>
-
-<a href="#home">Home</a>
-<a href="#projects">Projects</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-
-</nav>
-
-
-
-<!-- HOME -->
-
-<section id="home">
-
-<div class="hero">
-
-<img src="images/Perfil.jpg" alt="Mauricio Dominguez" class="profile">
-
-<div class="hero-text">
-
-<h1>Mauricio Dominguez Palacios</h1>
-
-<p class="subtitle">Data Science & Data Engineering Portfolio</p>
-
-<p>
-Mechatronics Engineer transitioning into Data Science and Data Engineering. 
-Interested in machine learning, data analysis, and building scalable data-driven solutions.
-</p>
-
-<a href="#projects" class="button">View Projects</a>
-
-<a href="https://github.com/Dominguez22" class="button2">GitHub</a>
-
-<div class="tech-icons">
-
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
-<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<h2>Projects</h2>
-
-<div class="projects-grid">
-
-<div class="project">
-
-<h3>Mobile Plan Classification</h3>
-
-<p>
-Machine learning project that classifies and recommends the most suitable mobile plan
-for users based on user behavior data.
-</p>
-
-<ul>
-<li>Exploratory Data Analysis</li>
-<li>Feature Engineering</li>
-<li>Model training (Random Forest, Logistic Regression)</li>
-<li>Hyperparameter tuning</li>
-</ul>
-
-<a href="https://github.com/Dominguez22/Mobile-Plan-Classification">View Project</a>
-
-<img src="images/project1.png">
-
-</div>
-
-
-
-<div class="project">
-
-<h3>Customer Churn Prediction</h3>
-
-<p>
-Machine learning project predicting customer churn for Beta Bank to support
-customer retention strategies.
-</p>
-
-<ul>
-<li>Data preprocessing</li>
-<li>Class imbalance handling</li>
-<li>Model training and evaluation</li>
-<li>F1-score optimization</li>
-</ul>
-
-<a href="https://github.com/Dominguez22/customer-churn-prediction">View Project</a>
-
-<img src="images/project2.png">
-
-</div>
-
-</div>
-
-
-
-<h2>More Projects</h2>
-
-<div id="github-projects" class="projects-grid"></div>
-
-</section>
-
-
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2>About Me</h2>
-
-<p>
-Mechatronics Engineer with experience in automation and robotics,
-transitioning into Data Science and Data Engineering. My focus is on
-building scalable data pipelines, machine learning models, and
-cloud-based data solutions.
-</p>
-
-<h3>Technical Skills</h3>
-
-<ul>
-
-<li><strong>Programming:</strong> Python, SQL</li>
-
-<li><strong>Cloud & Data Engineering:</strong> AWS (S3, Lambda, Step Functions, Glue, Bedrock), ETL Pipelines, Serverless Architectures</li>
-
-<li><strong>Data Platforms & Databases:</strong> Snowflake, PostgreSQL, Relational Databases</li>
-
-<li><strong>Data & Machine Learning:</strong> Pandas, NumPy, Scikit-learn, XGBoost, NLP (NLTK), LLM Integration</li>
-
-<li><strong>Software Engineering:</strong> REST API Concepts, MVC Architecture, Git, CI/CD Basics</li>
-
-<li><strong>Tools:</strong> GitHub, VS Code, Jupyter Notebook, Excel (Advanced)</li>
-
-</ul>
-
-</section>
-
-
-
-<!-- CONTACT -->
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<p>Email: mauricio.dmz22@gmail.com</p>
-
-<p>
-GitHub:
-<a href="https://github.com/Dominguez22">github.com/Dominguez22</a>
-</p>
-
-</section>
-
-
-
-<footer>
-
-<p>© 2026 Mauricio Dominguez</p>
-
-</footer>
-
-
-
-<script>
-
-fetch("https://api.github.com/users/Dominguez22/repos")
-.then(response => response.json())
-.then(data => {
-
-let container = document.getElementById("github-projects");
-
-data.slice(0,4).forEach(repo => {
-
-let project = document.createElement("div");
-
-project.className = "project";
-
-project.innerHTML = `
-<h3>${repo.name}</h3>
-<p>${repo.description || "No description available"}</p>
-<a href="${repo.html_url}" target="_blank">View Repository</a>
-`;
-
-container.appendChild(project);
-
-});
-
-});
-
-</script>
-
-
-
+    <header>
+        <h1>Your Name</h1>
+    </header>
+    <section>
+        <h2>Value Proposition</h2>
+        <p>Your value proposition goes here.</p>
+    </section>
+    <section>
+        <h2>What I Do Best</h2>
+        <p>A description of your skills and strengths.</p>
+    </section>
+    <section>
+        <h2>Technology Stack</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Other technologies and frameworks</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Core Competencies</h2>
+        <p>Detail your core competencies here.</p>
+    </section>
+    <section>
+        <h2>Featured Technical Projects</h2>
+        <ul>
+            <li>Project 1 - Description</li>
+            <li>Project 2 - Description</li>
+            <li>Project 3 - Description</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Professional Experience Timeline</h2>
+        <p>Detail your professional experience over time.</p>
+    </section>
+    <footer>
+        <p>© 2026 Your Name</p>
+    </footer>
 </body>
-
 </html>
