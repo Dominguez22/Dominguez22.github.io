@@ -8,6 +8,8 @@
 
     <style>
 
+        /* GENERAL */
+
         html{
             scroll-behavior:smooth;
         }
@@ -15,14 +17,45 @@
         body{
             margin:0;
             font-family:Arial, sans-serif;
-            background:#0f172a;
             color:#e2e8f0;
+
+            background:
+            linear-gradient(rgba(15,23,42,0.92),
+            rgba(15,23,42,0.96)),
+            url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+        }
+
+        section{
+            padding:90px 10%;
+        }
+
+        h1,h2,h3{
+            margin-top:0;
+        }
+
+        h2{
+            text-align:center;
+            font-size:42px;
+            margin-bottom:15px;
+            color:white;
+        }
+
+        .section-subtitle{
+            text-align:center;
+            color:#94a3b8;
+            font-size:18px;
+            margin-bottom:60px;
         }
 
         /* NAVBAR */
 
         nav{
-            background:#111827;
+            background:rgba(15,23,42,0.95);
+            backdrop-filter:blur(8px);
             padding:20px 8%;
             position:sticky;
             top:0;
@@ -42,45 +75,35 @@
             color:#38bdf8;
         }
 
-        /* SECTIONS */
-
-        section{
-            padding:80px 10%;
-        }
-
-        h1{
-            font-size:56px;
-            margin-bottom:10px;
-            color:white;
-        }
-
-        h2{
-            font-size:42px;
-            text-align:center;
-            margin-bottom:15px;
-            color:white;
-        }
-
-        .section-subtitle{
-            text-align:center;
-            color:#94a3b8;
-            margin-bottom:60px;
-            font-size:18px;
-        }
-
         /* HERO */
 
         .hero{
             display:flex;
             align-items:center;
             justify-content:center;
-            gap:60px;
+            gap:70px;
             flex-wrap:wrap;
-            min-height:80vh;
+            min-height:85vh;
+        }
+
+        .profile{
+            width:260px;
+            height:260px;
+            border-radius:50%;
+            object-fit:cover;
+            border:4px solid #38bdf8;
+            box-shadow:0 0 30px rgba(56,189,248,0.3);
         }
 
         .hero-text{
             max-width:650px;
+        }
+
+        h1{
+            font-size:58px;
+            line-height:1.1;
+            color:white;
+            margin-bottom:10px;
         }
 
         .subtitle{
@@ -90,27 +113,34 @@
         }
 
         .hero p{
-            line-height:1.8;
             color:#cbd5e1;
+            line-height:1.9;
             font-size:18px;
         }
 
-        /* PROFILE IMAGE */
+        /* HERO BADGES */
 
-        .profile{
-            width:260px;
-            height:260px;
-            object-fit:cover;
-            border-radius:50%;
-            border:4px solid #38bdf8;
-            box-shadow:0 0 30px rgba(56,189,248,0.3);
+        .hero-badges{
+            margin-top:25px;
+            display:flex;
+            gap:12px;
+            flex-wrap:wrap;
+        }
+
+        .hero-badges span{
+            background:#1e293b;
+            color:#38bdf8;
+            padding:10px 16px;
+            border-radius:20px;
+            font-size:14px;
+            border:1px solid #334155;
         }
 
         /* BUTTONS */
 
         .button{
             display:inline-block;
-            margin-top:20px;
+            margin-top:30px;
             margin-right:15px;
             padding:14px 30px;
             border-radius:8px;
@@ -143,7 +173,7 @@
         .tech-icons{
             display:flex;
             gap:15px;
-            margin-top:30px;
+            margin-top:35px;
             flex-wrap:wrap;
         }
 
@@ -159,89 +189,114 @@
         /* ABOUT */
 
         .about-box{
-            max-width:900px;
+            background:rgba(17,24,39,0.85);
+            padding:45px;
+            border-radius:16px;
+            max-width:950px;
             margin:auto;
-            background:#111827;
-            padding:40px;
-            border-radius:12px;
             line-height:1.9;
+            border:1px solid #1e293b;
+            backdrop-filter:blur(8px);
+        }
+
+        .about-box p{
             color:#cbd5e1;
+            font-size:17px;
         }
 
         /* SKILLS */
 
         .skills-grid{
             display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
-            gap:25px;
-            margin-top:40px;
+            grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+            gap:30px;
         }
 
         .skill-card{
-            background:#111827;
-            padding:30px;
-            border-radius:12px;
+            background:rgba(17,24,39,0.85);
+            padding:35px;
+            border-radius:16px;
             border:1px solid #1e293b;
+            transition:0.3s;
+            backdrop-filter:blur(6px);
+        }
+
+        .skill-card:hover{
+            transform:translateY(-8px);
+            border-color:#38bdf8;
+            box-shadow:0 10px 30px rgba(56,189,248,0.15);
         }
 
         .skill-card h3{
             color:#38bdf8;
-            margin-top:0;
+            margin-bottom:20px;
         }
 
         .skill-card p{
             color:#cbd5e1;
-            line-height:1.7;
+            line-height:1.8;
         }
 
         /* PROJECTS */
 
         .projects-grid{
             display:grid;
-            grid-template-columns:repeat(auto-fit, minmax(340px,1fr));
+            grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
             gap:35px;
         }
 
         .project-card{
-            background:#111827;
-            border-radius:12px;
+            background:rgba(17,24,39,0.9);
+            border-radius:16px;
             overflow:hidden;
-            transition:0.3s;
             border:1px solid #1e293b;
+            transition:0.3s;
         }
 
         .project-card:hover{
-            transform:translateY(-5px);
-            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+            transform:translateY(-8px);
+            box-shadow:0 12px 35px rgba(0,0,0,0.35);
         }
 
         .project-content{
-            padding:30px;
+            padding:35px;
         }
 
-        .project-card h3{
+        .project-content h3{
             color:white;
-            margin-top:0;
+            margin-bottom:20px;
         }
 
-        .project-card p{
+        .project-content p{
             color:#cbd5e1;
-            line-height:1.7;
+            line-height:1.8;
         }
 
         .tags{
             display:flex;
             flex-wrap:wrap;
             gap:10px;
-            margin-top:20px;
+            margin-top:25px;
         }
 
         .tag{
             background:#1e293b;
             color:#38bdf8;
-            padding:6px 12px;
+            padding:8px 12px;
             border-radius:6px;
             font-size:13px;
+        }
+
+        .results-box{
+            margin-top:25px;
+            background:#0f172a;
+            padding:20px;
+            border-left:4px solid #38bdf8;
+            border-radius:8px;
+        }
+
+        .results-box strong{
+            color:#38bdf8;
         }
 
         .project-link{
@@ -252,29 +307,23 @@
             font-weight:bold;
         }
 
+        .project-link:hover{
+            text-decoration:underline;
+        }
+
         /* EXPERIENCE */
 
         .experience-box{
-            max-width:900px;
+            max-width:950px;
             margin:auto;
         }
 
         .experience-item{
-            background:#111827;
-            padding:30px;
-            border-radius:12px;
+            background:rgba(17,24,39,0.9);
+            padding:35px;
+            border-radius:16px;
             margin-bottom:25px;
             border-left:4px solid #38bdf8;
-        }
-
-        .experience-item h3{
-            margin-top:0;
-            color:white;
-        }
-
-        .experience-item p{
-            color:#cbd5e1;
-            line-height:1.8;
         }
 
         .date{
@@ -283,15 +332,30 @@
             margin-bottom:10px;
         }
 
+        .experience-item h3{
+            color:white;
+            margin-bottom:15px;
+        }
+
+        .experience-item p{
+            color:#cbd5e1;
+            line-height:1.8;
+        }
+
         /* CONTACT */
 
         .contact-box{
             text-align:center;
+            background:rgba(17,24,39,0.9);
+            padding:45px;
+            border-radius:16px;
+            max-width:700px;
+            margin:auto;
         }
 
         .contact-box p{
             font-size:18px;
-            margin:15px 0;
+            margin:20px 0;
         }
 
         .contact-box a{
@@ -299,22 +363,31 @@
             text-decoration:none;
         }
 
+        .contact-box a:hover{
+            text-decoration:underline;
+        }
+
         /* FOOTER */
 
         footer{
             text-align:center;
             padding:30px;
-            background:#111827;
+            background:#0f172a;
             color:#94a3b8;
             margin-top:40px;
+            border-top:1px solid #1e293b;
         }
 
         /* MOBILE */
 
         @media(max-width:768px){
 
+            section{
+                padding:70px 7%;
+            }
+
             h1{
-                font-size:40px;
+                font-size:42px;
             }
 
             h2{
@@ -324,10 +397,6 @@
             nav a{
                 margin-right:15px;
                 font-size:14px;
-            }
-
-            section{
-                padding:60px 6%;
             }
 
             .profile{
@@ -372,12 +441,24 @@
                 <p>
                     Mechatronics Engineer transitioning into Data Science and Data Engineering.
                     Passionate about machine learning, cloud technologies, automation,
-                    and building scalable data-driven solutions.
+                    and scalable data-driven solutions.
                 </p>
 
-                <a href="#projects" class="button primary-btn">View Projects</a>
+                <div class="hero-badges">
+                    <span>Machine Learning</span>
+                    <span>AWS</span>
+                    <span>ETL Pipelines</span>
+                    <span>Python</span>
+                    <span>SQL</span>
+                </div>
 
-                <a href="https://github.com/Dominguez22" target="_blank" class="button secondary-btn">
+                <a href="#projects" class="button primary-btn">
+                    View Projects
+                </a>
+
+                <a href="https://github.com/Dominguez22"
+                target="_blank"
+                class="button secondary-btn">
                     GitHub
                 </a>
 
@@ -386,6 +467,7 @@
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
                 </div>
 
             </div>
@@ -401,21 +483,22 @@
         <h2>About Me</h2>
 
         <p class="section-subtitle">
-            Engineering mindset combined with data-driven problem solving
+            Engineering mindset combined with analytics and automation
         </p>
 
         <div class="about-box">
 
             <p>
                 I have a background in Mechatronics Engineering with experience in
-                automation, robotics, and intelligent systems. Recently, I have focused
-                on Data Science and Data Engineering, building machine learning models,
-                ETL pipelines, and cloud-based solutions.
+                robotics, industrial automation, and intelligent systems.
+                Recently, I transitioned into Data Science and Data Engineering,
+                focusing on machine learning, ETL pipelines, cloud infrastructure,
+                and scalable analytics solutions.
             </p>
 
             <p>
-                My goal is to combine engineering thinking with analytics and software
-                development to create scalable and impactful solutions.
+                My goal is to combine engineering thinking with data-driven decision making
+                to build reliable, efficient, and impactful solutions.
             </p>
 
         </div>
@@ -435,23 +518,34 @@
         <div class="skills-grid">
 
             <div class="skill-card">
-                <h3>Programming</h3>
-                <p>Python, SQL, Git, REST APIs</p>
+                <h3>💻 Programming</h3>
+                <p>
+                    Python, SQL, REST API concepts, Git, MVC architecture
+                </p>
             </div>
 
             <div class="skill-card">
-                <h3>Data Science</h3>
-                <p>Pandas, NumPy, Scikit-learn, XGBoost, NLP, Machine Learning</p>
+                <h3>📊 Data Science</h3>
+                <p>
+                    Pandas, NumPy, Scikit-learn, XGBoost,
+                    NLP, feature engineering, model evaluation
+                </p>
             </div>
 
             <div class="skill-card">
-                <h3>Data Engineering</h3>
-                <p>AWS, ETL Pipelines, Airflow, Docker, PostgreSQL</p>
+                <h3>☁️ Data Engineering</h3>
+                <p>
+                    AWS, ETL pipelines, Apache Airflow,
+                    Docker, PostgreSQL, serverless workflows
+                </p>
             </div>
 
             <div class="skill-card">
-                <h3>Tools</h3>
-                <p>GitHub, VS Code, Jupyter Notebook, Excel</p>
+                <h3>🛠 Tools</h3>
+                <p>
+                    GitHub, VS Code, Jupyter Notebook,
+                    Excel, CI/CD basics
+                </p>
             </div>
 
         </div>
@@ -465,7 +559,7 @@
         <h2>Featured Projects</h2>
 
         <p class="section-subtitle">
-            Machine learning and data engineering projects
+            Machine learning and data engineering solutions
         </p>
 
         <div class="projects-grid">
@@ -479,15 +573,35 @@
                     <h3>Customer Churn Prediction</h3>
 
                     <p>
-                        Built a machine learning model to predict customer churn using
-                        customer behavior and service usage data.
+                        Developed a machine learning model to predict customer churn
+                        using customer demographics, service usage,
+                        and contract information.
                     </p>
+
+                    <p>
+                        Performed data preprocessing, feature engineering,
+                        exploratory analysis, and model optimization
+                        using multiple classification algorithms.
+                    </p>
+
+                    <div class="results-box">
+
+                        <strong>Key Results:</strong>
+
+                        <p>
+                            Achieved ROC-AUC score of 0.93 using LightGBM
+                            and identified contract type and tenure
+                            as the strongest churn indicators.
+                        </p>
+
+                    </div>
 
                     <div class="tags">
                         <div class="tag">Python</div>
                         <div class="tag">Scikit-learn</div>
                         <div class="tag">LightGBM</div>
                         <div class="tag">EDA</div>
+                        <div class="tag">ML</div>
                     </div>
 
                     <a href="https://github.com/Dominguez22/customer-churn-prediction-ds/tree/main"
@@ -509,15 +623,34 @@
                     <h3>Airflow Crypto ETL Pipeline</h3>
 
                     <p>
-                        Developed an end-to-end ETL pipeline using Apache Airflow,
-                        Docker, PostgreSQL, and CoinGecko API.
+                        Designed and orchestrated an end-to-end ETL pipeline
+                        using Apache Airflow, Docker, PostgreSQL,
+                        and CoinGecko API.
                     </p>
+
+                    <p>
+                        Automated cryptocurrency data extraction,
+                        transformation, validation, and loading
+                        for downstream analytics workflows.
+                    </p>
+
+                    <div class="results-box">
+
+                        <strong>Key Results:</strong>
+
+                        <p>
+                            Built a modular and scalable pipeline with automated scheduling,
+                            workflow orchestration, and reliable data processing.
+                        </p>
+
+                    </div>
 
                     <div class="tags">
                         <div class="tag">Airflow</div>
                         <div class="tag">Docker</div>
                         <div class="tag">PostgreSQL</div>
-                        <div class="tag">AWS</div>
+                        <div class="tag">ETL</div>
+                        <div class="tag">Python</div>
                     </div>
 
                     <a href="https://github.com/Dominguez22/airflow-crypto-pipeline"
@@ -548,13 +681,15 @@
 
             <div class="experience-item">
 
-                <div class="date">2025 - Present</div>
+                <div class="date">2025</div>
 
                 <h3>Data Engineering Project – AWS QA Automation</h3>
 
                 <p>
-                    Developed serverless AWS workflows for data validation using
-                    Lambda, Step Functions, Snowflake, and Amazon Bedrock.
+                    Designed and implemented a serverless AWS workflow
+                    for automated data validation using Lambda,
+                    Step Functions, Snowflake, Amazon S3,
+                    and Amazon Bedrock.
                 </p>
 
             </div>
@@ -566,8 +701,25 @@
                 <h3>Automotive Diagnostic Engineer</h3>
 
                 <p>
-                    Performed diagnostic analysis and troubleshooting for automotive
-                    systems while collaborating with international technical teams.
+                    Performed diagnostic analysis and troubleshooting
+                    for automotive systems while collaborating
+                    with international technical teams across
+                    the United States and Canada.
+                </p>
+
+            </div>
+
+            <div class="experience-item">
+
+                <div class="date">2024 - 2025</div>
+
+                <h3>Data Science Bootcamp – TripleTen</h3>
+
+                <p>
+                    Completed intensive training focused on
+                    machine learning, statistics, SQL,
+                    data visualization, and real-world
+                    business analytics projects.
                 </p>
 
             </div>
@@ -579,8 +731,9 @@
                 <h3>Engineering Intern – Robotics & Automation</h3>
 
                 <p>
-                    Developed Python scripts integrated with RoboDK and participated
-                    in automation projects involving PLCs, sensors, and computer vision.
+                    Developed Python scripts integrated with RoboDK
+                    and participated in automation projects involving
+                    PLCs, sensors, robotics, and computer vision systems.
                 </p>
 
             </div>
@@ -608,8 +761,8 @@
 
             <p>
                 LinkedIn:
-                <a href="https://www.linkedin.com/in/mauricio-domínguez-palacios-aa978521a/" target="_blank">
-                    https://www.linkedin.com/in/
+                <a href="https://linkedin.com/in/mauricio-domínguez-palacios-aa978521a" target="_blank">
+                    linkedin.com/in/mauricio-domínguez-palacios-aa978521a
                 </a>
             </p>
 
