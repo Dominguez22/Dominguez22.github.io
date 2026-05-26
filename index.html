@@ -7,651 +7,334 @@
     <title>Mauricio | Data Portfolio</title>
 
     <style>
-        /* GENERAL */
-        html {
-            scroll-behavior: smooth;
+
+        html{
+            scroll-behavior:smooth;
         }
 
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            color: #e4e4e4;
-            background: #121212;
+        body{
+            margin:0;
+            font-family:Arial, sans-serif;
+            background:#0f172a;
+            color:#e2e8f0;
         }
 
         /* NAVBAR */
-        nav {
-            background: #1a1a1a;
-            padding: 20px 5%;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid #333;
+
+        nav{
+            background:#111827;
+            padding:20px 8%;
+            position:sticky;
+            top:0;
+            z-index:100;
+            border-bottom:1px solid #1e293b;
         }
 
-        nav a {
-            color: #e4e4e4;
-            margin-right: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
+        nav a{
+            color:#e2e8f0;
+            text-decoration:none;
+            margin-right:30px;
+            font-weight:bold;
+            transition:0.3s;
         }
 
-        nav a:hover {
-            color: #b8956a;
+        nav a:hover{
+            color:#38bdf8;
         }
 
         /* SECTIONS */
-        section {
-            padding: 80px 10%;
+
+        section{
+            padding:80px 10%;
         }
 
-        h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-align: center;
-            color: #fff;
-            position: relative;
-            padding-bottom: 20px;
+        h1{
+            font-size:56px;
+            margin-bottom:10px;
+            color:white;
         }
 
-        h2::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 3px;
-            background: #b8956a;
-            margin: 20px auto 0;
+        h2{
+            font-size:42px;
+            text-align:center;
+            margin-bottom:15px;
+            color:white;
         }
 
-        h3 {
-            color: #fff;
-            font-size: 24px;
+        .section-subtitle{
+            text-align:center;
+            color:#94a3b8;
+            margin-bottom:60px;
+            font-size:18px;
         }
 
         /* HERO */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 60px;
-            flex-wrap: wrap;
-            min-height: 500px;
+
+        .hero{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:60px;
+            flex-wrap:wrap;
+            min-height:80vh;
         }
 
-        .hero-text {
-            max-width: 600px;
+        .hero-text{
+            max-width:650px;
         }
 
-        h1 {
-            font-size: 48px;
-            margin: 0 0 10px 0;
-            color: #fff;
+        .subtitle{
+            color:#38bdf8;
+            font-size:24px;
+            margin-bottom:20px;
         }
 
-        .subtitle {
-            font-size: 22px;
-            color: #b8956a;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 16px;
-            line-height: 1.8;
-            color: #ccc;
-            margin-bottom: 20px;
+        .hero p{
+            line-height:1.8;
+            color:#cbd5e1;
+            font-size:18px;
         }
 
         /* PROFILE IMAGE */
-        .profile {
-            width: 250px;
-            height: 250px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #b8956a;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+        .profile{
+            width:260px;
+            height:260px;
+            object-fit:cover;
+            border-radius:50%;
+            border:4px solid #38bdf8;
+            box-shadow:0 0 30px rgba(56,189,248,0.3);
         }
 
         /* BUTTONS */
-        .button {
-            display: inline-block;
-            margin-top: 15px;
-            margin-right: 15px;
-            padding: 12px 30px;
-            background: #b8956a;
-            color: #121212;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            transition: all 0.3s;
-            border: 2px solid #b8956a;
+
+        .button{
+            display:inline-block;
+            margin-top:20px;
+            margin-right:15px;
+            padding:14px 30px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            transition:0.3s;
         }
 
-        .button:hover {
-            background: transparent;
-            color: #b8956a;
+        .primary-btn{
+            background:#38bdf8;
+            color:#0f172a;
         }
 
-        .button2 {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 30px;
-            background: transparent;
-            color: #b8956a;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-            border: 2px solid #b8956a;
-            transition: all 0.3s;
+        .primary-btn:hover{
+            background:#0ea5e9;
         }
 
-        .button2:hover {
-            background: #b8956a;
-            color: #121212;
+        .secondary-btn{
+            border:2px solid #38bdf8;
+            color:#38bdf8;
+        }
+
+        .secondary-btn:hover{
+            background:#38bdf8;
+            color:#0f172a;
         }
 
         /* TECH ICONS */
-        .tech-icons {
-            margin-top: 30px;
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+
+        .tech-icons{
+            display:flex;
+            gap:15px;
+            margin-top:30px;
+            flex-wrap:wrap;
         }
 
-        .tech-icons img {
-            width: 50px;
-            height: 50px;
-            transition: transform 0.3s;
+        .tech-icons img{
+            width:45px;
+            transition:0.3s;
         }
 
-        .tech-icons img:hover {
-            transform: scale(1.2);
+        .tech-icons img:hover{
+            transform:scale(1.15);
         }
 
-        /* VALUE PROPOSITION SECTION */
-        .value-prop-container {
-            max-width: 1000px;
-            margin: 0 auto;
+        /* ABOUT */
+
+        .about-box{
+            max-width:900px;
+            margin:auto;
+            background:#111827;
+            padding:40px;
+            border-radius:12px;
+            line-height:1.9;
+            color:#cbd5e1;
         }
 
-        .value-prop-subtitle {
-            text-align: center;
-            font-size: 18px;
-            color: #aaa;
-            margin-bottom: 50px;
+        /* SKILLS */
+
+        .skills-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+            gap:25px;
+            margin-top:40px;
         }
 
-        .value-prop-box {
-            background: #1e1e1e;
-            border: 2px solid #b8956a;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 20px;
-            font-weight: bold;
-            color: #b8956a;
+        .skill-card{
+            background:#111827;
+            padding:30px;
+            border-radius:12px;
+            border:1px solid #1e293b;
         }
 
-        .competitive-advantage {
-            text-align: center;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 40px;
-            color: #fff;
+        .skill-card h3{
+            color:#38bdf8;
+            margin-top:0;
         }
 
-        .three-column {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+        .skill-card p{
+            color:#cbd5e1;
+            line-height:1.7;
         }
 
-        .feature-box {
-            background: #1e1e1e;
-            padding: 30px;
-            border-radius: 8px;
-            text-align: center;
+        /* PROJECTS */
+
+        .projects-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit, minmax(340px,1fr));
+            gap:35px;
         }
 
-        .feature-box p {
-            color: #ccc;
-            line-height: 1.8;
+        .project-card{
+            background:#111827;
+            border-radius:12px;
+            overflow:hidden;
+            transition:0.3s;
+            border:1px solid #1e293b;
         }
 
-        /* WHAT I DO BEST */
-        .what-i-do-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+        .project-card:hover{
+            transform:translateY(-5px);
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
         }
 
-        .competency-card {
-            background: #1e1e1e;
-            padding: 35px;
-            border-radius: 10px;
-            border-top: 4px solid #b8956a;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .project-content{
+            padding:30px;
         }
 
-        .competency-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(184, 149, 106, 0.2);
+        .project-card h3{
+            color:white;
+            margin-top:0;
         }
 
-        .competency-card h3 {
-            margin-top: 0;
-            color: #b8956a;
+        .project-card p{
+            color:#cbd5e1;
+            line-height:1.7;
         }
 
-        .competency-card ul {
-            list-style: none;
-            padding: 0;
+        .tags{
+            display:flex;
+            flex-wrap:wrap;
+            gap:10px;
+            margin-top:20px;
         }
 
-        .competency-card li {
-            color: #aaa;
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
+        .tag{
+            background:#1e293b;
+            color:#38bdf8;
+            padding:6px 12px;
+            border-radius:6px;
+            font-size:13px;
         }
 
-        .competency-card li::before {
-            content: '▸';
-            position: absolute;
-            left: 0;
-            color: #b8956a;
+        .project-link{
+            display:inline-block;
+            margin-top:25px;
+            color:#38bdf8;
+            text-decoration:none;
+            font-weight:bold;
         }
 
-        /* TECHNOLOGY STACK */
-        .tech-stack-container {
-            max-width: 1200px;
-            margin: 0 auto;
+        /* EXPERIENCE */
+
+        .experience-box{
+            max-width:900px;
+            margin:auto;
         }
 
-        .tech-stack-subtitle {
-            text-align: center;
-            font-size: 18px;
-            color: #aaa;
-            margin-bottom: 60px;
+        .experience-item{
+            background:#111827;
+            padding:30px;
+            border-radius:12px;
+            margin-bottom:25px;
+            border-left:4px solid #38bdf8;
         }
 
-        .tech-category {
-            margin-bottom: 50px;
+        .experience-item h3{
+            margin-top:0;
+            color:white;
         }
 
-        .tech-category h4 {
-            font-size: 18px;
-            color: #b8956a;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            border-bottom: 2px solid #b8956a;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+        .experience-item p{
+            color:#cbd5e1;
+            line-height:1.8;
         }
 
-        .tech-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+        .date{
+            color:#38bdf8;
+            font-weight:bold;
+            margin-bottom:10px;
         }
 
-        .tech-item {
-            background: #1e1e1e;
-            padding: 12px 20px;
-            border-radius: 6px;
-            color: #ccc;
-            border: 1px solid #333;
-            transition: all 0.3s;
+        /* CONTACT */
+
+        .contact-box{
+            text-align:center;
         }
 
-        .tech-item:hover {
-            border-color: #b8956a;
-            color: #b8956a;
+        .contact-box p{
+            font-size:18px;
+            margin:15px 0;
         }
 
-        /* CORE COMPETENCIES */
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            margin-top: 60px;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .competency-section h4 {
-            font-size: 18px;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #b8956a;
-        }
-
-        .competency-section ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .competency-section li {
-            color: #aaa;
-            margin-bottom: 20px;
-            padding-left: 30px;
-            position: relative;
-            line-height: 1.6;
-        }
-
-        .competency-section li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #b8956a;
-            font-weight: bold;
-        }
-
-        /* FEATURED PROJECTS */
-        .featured-projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
-        }
-
-        .featured-project-card {
-            background: #1e1e1e;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s;
-        }
-
-        .featured-project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(184, 149, 106, 0.15);
-        }
-
-        .project-header {
-            background: #8b4949;
-            padding: 30px;
-            min-height: 150px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .project-header h3 {
-            margin: 0;
-            color: #fff;
-            font-size: 20px;
-        }
-
-        .project-body {
-            padding: 30px;
-        }
-
-        .project-body p {
-            color: #aaa;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .technical-solution {
-            margin: 20px 0;
-        }
-
-        .technical-solution h5 {
-            color: #b8956a;
-            font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
-        }
-
-        .tech-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 15px;
-        }
-
-        .tech-tag {
-            background: #2a2a2a;
-            color: #aaa;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 12px;
-        }
-
-        .results-box {
-            background: #2a2a2a;
-            padding: 20px;
-            border-left: 3px solid #b8956a;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-
-        .results-box strong {
-            color: #b8956a;
-        }
-
-        .results-box p {
-            color: #aaa;
-            margin: 0;
-            line-height: 1.6;
-        }
-
-        .view-project-link {
-            color: #b8956a;
-            text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
-            display: inline-block;
-            margin-top: 15px;
-        }
-
-        .view-project-link:hover {
-            color: #d4af7a;
-            text-decoration: underline;
-        }
-
-        /* PROFESSIONAL EXPERIENCE */
-        .experience-container {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .timeline {
-            position: relative;
-            padding: 20px 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 2px;
-            height: 100%;
-            background: #b8956a;
-            top: 0;
-        }
-
-        .experience-item {
-            margin-bottom: 50px;
-            position: relative;
-        }
-
-        .experience-item:nth-child(odd) {
-            text-align: right;
-            padding-right: 52%;
-        }
-
-        .experience-item:nth-child(even) {
-            text-align: left;
-            padding-left: 52%;
-        }
-
-        .experience-item::before {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            background: #b8956a;
-            border: 3px solid #121212;
-            border-radius: 50%;
-            left: 50%;
-            top: 0;
-            transform: translateX(-50%);
-        }
-
-        .experience-date {
-            color: #b8956a;
-            font-weight: bold;
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .experience-content {
-            background: #1e1e1e;
-            padding: 25px;
-            border-radius: 8px;
-            border: 1px solid #333;
-        }
-
-        .experience-content h4 {
-            margin: 0 0 5px 0;
-            color: #fff;
-            font-size: 18px;
-        }
-
-        .experience-content .company {
-            color: #b8956a;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .experience-content ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .experience-content li {
-            color: #aaa;
-            margin-bottom: 10px;
-            padding-left: 20px;
-            position: relative;
-            font-size: 14px;
-        }
-
-        .experience-content li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #b8956a;
-        }
-
-        /* CONTACT SECTION */
-        #contact {
-            text-align: center;
-        }
-
-        .contact-info {
-            max-width: 600px;
-            margin: 40px auto;
-            font-size: 16px;
-        }
-
-        .contact-item {
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-        }
-
-        .contact-item a {
-            color: #b8956a;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .contact-item a:hover {
-            color: #d4af7a;
-            text-decoration: underline;
+        .contact-box a{
+            color:#38bdf8;
+            text-decoration:none;
         }
 
         /* FOOTER */
-        footer {
-            background: #1a1a1a;
-            color: #aaa;
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #333;
-            margin-top: 40px;
+
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#111827;
+            color:#94a3b8;
+            margin-top:40px;
         }
 
-        footer p {
-            margin: 0;
-        }
+        /* MOBILE */
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-            nav {
-                padding: 15px 5%;
+        @media(max-width:768px){
+
+            h1{
+                font-size:40px;
             }
 
-            nav a {
-                margin-right: 15px;
-                font-size: 14px;
+            h2{
+                font-size:34px;
             }
 
-            section {
-                padding: 50px 5%;
+            nav a{
+                margin-right:15px;
+                font-size:14px;
             }
 
-            .hero {
-                gap: 30px;
-                min-height: auto;
+            section{
+                padding:60px 6%;
             }
 
-            .profile {
-                width: 180px;
-                height: 180px;
+            .profile{
+                width:200px;
+                height:200px;
             }
 
-            h2 {
-                font-size: 36px;
-            }
-
-            .competencies-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-
-            .timeline::before {
-                left: 10px;
-            }
-
-            .experience-item:nth-child(odd),
-            .experience-item:nth-child(even) {
-                padding-left: 50px;
-                padding-right: 0;
-                text-align: left;
-            }
-
-            .experience-item::before {
-                left: 0;
-            }
-
-            .featured-projects-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
     </style>
@@ -660,443 +343,289 @@
 <body>
 
     <!-- NAVBAR -->
+
     <nav>
         <a href="#home">Home</a>
-        <a href="#value">Value Proposition</a>
-        <a href="#what-i-do">What I Do Best</a>
-        <a href="#tech-stack">Tech Stack</a>
-        <a href="#competencies">Core Competencies</a>
-        <a href="#projects">Featured Projects</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- HOME SECTION -->
+    <!-- HOME -->
+
     <section id="home">
+
         <div class="hero">
-            <img src="images/Perfil.jpg" alt="Mauricio Dominguez" class="profile">
+
+            <img src="images/Perfil.jpg" alt="Mauricio" class="profile">
+
             <div class="hero-text">
+
                 <h1>Mauricio Dominguez Palacios</h1>
-                <p class="subtitle">Mechatronics Engineer | Data Scientist | Data Engineer</p>
-                <p>
-                    Data Engineer and Data Scientist with a Mechatronics Engineering background, specializing in building data pipelines, 
-                    automating workflows, and extracting actionable insights. I leverage engineering principles and data-driven approaches 
-                    to solve complex problems, optimize systems, and deliver scalable, high-impact solutions.
+
+                <p class="subtitle">
+                    Data Scientist | Machine Learning & Analytics | Mechatronics Engineer
                 </p>
-                <a href="#projects" class="button">View Projects</a>
-                <a href="https://github.com/Dominguez22" target="_blank" class="button2">GitHub</a>
+
+                <p>
+                    Mechatronics Engineer transitioning into Data Science and Data Engineering.
+                    Passionate about machine learning, cloud technologies, automation,
+                    and building scalable data-driven solutions.
+                </p>
+
+                <a href="#projects" class="button primary-btn">View Projects</a>
+
+                <a href="https://github.com/Dominguez22" target="_blank" class="button secondary-btn">
+                    GitHub
+                </a>
+
                 <div class="tech-icons">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" alt="AWS">
-                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg">
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- MY VALUE PROPOSITION -->
-    <section id="value">
-        <div class="value-prop-container">
-            <h2>My Value Proposition</h2>
-            <p class="value-prop-subtitle">Why work with someone who bridges engineering, data science, and data engineering?</p>
-            
-            <div class="value-prop-box">
-                UNIQUE COMBINATION OF SKILLS<br>
-                Mechatronics Engineer + Data Scientist + Data Engineer = End-to-End Solutions Designer
-            </div>
+    <!-- ABOUT -->
 
-            <p class="competitive-advantage">This unique combination is my competitive advantage:</p>
+    <section id="about">
 
-            <div class="three-column">
-                <div class="feature-box">
-                    <p>
-                        <strong>I UNDERSTAND SYSTEM-LEVEL THINKING</strong><br>
-                        From mechanical systems to data architectures—I grasp how components interact
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <p>
-                        <strong>I DESIGN END-TO-END SOLUTIONS</strong><br>
-                        From raw data ingestion through transformation to actionable ML models
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <p>
-                        <strong>I BUILD SCALABLE PIPELINES</strong><br>
-                        Serverless architectures, cloud infrastructure, and production-ready code
-                    </p>
-                </div>
-            </div>
+        <h2>About Me</h2>
 
-            <div class="three-column">
-                <div class="feature-box">
-                    <p>
-                        <strong>I TRANSLATE TECHNICAL COMPLEXITY</strong><br>
-                        Making advanced solutions understandable for non-technical stakeholders
-                    </p>
-                </div>
-                <div class="feature-box">
-                    <p>
-                        <strong>I AUTOMATE INTELLIGENTLY</strong><br>
-                        Using ML and orchestration to reduce manual effort at scale
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT I DO BEST -->
-    <section id="what-i-do">
-        <h2>What I Do Best</h2>
-        <p style="text-align: center; color: #aaa; font-size: 18px; margin-bottom: 50px;">
-            Specialized expertise across data science, engineering, and analytics
+        <p class="section-subtitle">
+            Engineering mindset combined with data-driven problem solving
         </p>
 
-        <div class="what-i-do-grid">
-            <div class="competency-card">
-                <h3>Machine Learning & Predictive Analytics</h3>
-                <ul>
-                    <li>Classification & Regression modeling</li>
-                    <li>Time-series forecasting & demand prediction</li>
-                    <li>Feature engineering & model optimization</li>
-                    <li>Hyperparameter tuning & model evaluation</li>
-                    <li>Business impact through data-driven insights</li>
-                </ul>
-            </div>
+        <div class="about-box">
 
-            <div class="competency-card">
-                <h3>Data Engineering & Visualization</h3>
-                <ul>
-                    <li>ETL/ELT pipeline design & orchestration</li>
-                    <li>Cloud data infrastructure (AWS, Databricks)</li>
-                    <li>Data transformation & quality assurance</li>
-                    <li>Interactive dashboards & business intelligence</li>
-                    <li>Serverless data architectures at scale</li>
-                </ul>
-            </div>
-
-            <div class="competency-card">
-                <h3>System Integration & Automation</h3>
-                <ul>
-                    <li>End-to-end ML pipeline deployment</li>
-                    <li>AI-driven workflow automation</li>
-                    <li>API integration & microservices</li>
-                    <li>Real-time data processing</li>
-                    <li>Production-ready code & documentation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- TECHNOLOGY STACK -->
-    <section id="tech-stack">
-        <h2>Technology Stack</h2>
-        <p class="tech-stack-subtitle">Tools and technologies I master to create valuable solutions</p>
-
-        <div class="tech-stack-container">
-            <div class="tech-category">
-                <h4>Machine Learning & AI</h4>
-                <div class="tech-items">
-                    <div class="tech-item">Python</div>
-                    <div class="tech-item">Scikit-learn</div>
-                    <div class="tech-item">XGBoost</div>
-                    <div class="tech-item">TensorFlow</div>
-                    <div class="tech-item">PyTorch</div>
-                    <div class="tech-item">LightGBM</div>
-                </div>
-            </div>
-
-            <div class="tech-category">
-                <h4>NLP & Deep Learning</h4>
-                <div class="tech-items">
-                    <div class="tech-item">NLTK</div>
-                    <div class="tech-item">Transformers</div>
-                    <div class="tech-item">Sentiment Analysis</div>
-                    <div class="tech-item">Keras</div>
-                    <div class="tech-item">spaCy</div>
-                    <div class="tech-item">BERT</div>
-                </div>
-            </div>
-
-            <div class="tech-category">
-                <h4>Data Analysis & Visualization</h4>
-                <div class="tech-items">
-                    <div class="tech-item">Pandas</div>
-                    <div class="tech-item">NumPy</div>
-                    <div class="tech-item">SQL</div>
-                    <div class="tech-item">Matplotlib</div>
-                    <div class="tech-item">Seaborn</div>
-                    <div class="tech-item">Plotly</div>
-                    <div class="tech-item">Power BI</div>
-                </div>
-            </div>
-
-            <div class="tech-category">
-                <h4>Cloud & Data Engineering</h4>
-                <div class="tech-items">
-                    <div class="tech-item">AWS (S3, Lambda, Step Functions)</div>
-                    <div class="tech-item">Databricks</div>
-                    <div class="tech-item">PostgreSQL</div>
-                    <div class="tech-item">Apache Airflow</div>
-                    <div class="tech-item">Docker</div>
-                    <div class="tech-item">Git</div>
-                </div>
-            </div>
-
-            <div class="tech-category">
-                <h4>Business Intelligence</h4>
-                <div class="tech-items">
-                    <div class="tech-item">Statistical Analysis</div>
-                    <div class="tech-item">A/B Testing</div>
-                    <div class="tech-item">Hypothesis Testing</div>
-                    <div class="tech-item">Cross-validation</div>
-                    <div class="tech-item">Bootstrapping</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CORE COMPETENCIES -->
-    <section id="competencies">
-        <h2>Core Competencies</h2>
-        <p style="text-align: center; color: #aaa; font-size: 18px; margin-bottom: 50px;">
-            Technical skills that enable comprehensive solutions
-        </p>
-
-        <div class="competencies-grid">
-            <div class="competency-section">
-                <h4>Technical Skills</h4>
-                <ul>
-                    <li>End-to-End ML Projects: Problem definition to production deployment</li>
-                    <li>Feature Engineering & Model Optimization</li>
-                    <li>Skilled at translating raw data into actionable insights</li>
-                    <li>Code Quality: Clean, documented, reproducible analysis</li>
-                    <li>Data Pipeline Architecture & Orchestration</li>
-                    <li>Cloud Infrastructure & Serverless Design</li>
-                    <li>Real-time Data Processing & Streaming</li>
-                    <li>API Integration & System Design</li>
-                </ul>
-            </div>
-
-            <div class="competency-section">
-                <h4>Engineering Mindset</h4>
-                <ul>
-                    <li>System-level thinking across mechanical and software domains</li>
-                    <li>Scalability & Performance Optimization</li>
-                    <li>Reliability & Data Quality Assurance</li>
-                    <li>Automation of repetitive & manual processes</li>
-                    <li>Cross-functional Problem Solving</li>
-                    <li>Structured Approach to Complex Problems</li>
-                    <li>Documentation & Knowledge Transfer</li>
-                    <li>Continuous Learning & Adaptation</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURED TECHNICAL PROJECTS -->
-    <section id="projects">
-        <h2>Featured Technical Projects</h2>
-        <p style="text-align: center; color: #aaa; font-size: 18px; margin-bottom: 50px;">
-            End-to-end ML and data engineering solutions that generate measurable business impact
-        </p>
-
-        <div class="featured-projects-grid">
-            <!-- Project 1 -->
-<div class="featured-project-card">
-    <div class="project-header">
-        <h3>Customer Churn Prediction – Interconnect Telecom</h3>
-    </div>
-    <div class="project-body">
-        <p>
-            Developed a machine learning model to predict customer churn using contract data, service usage, and demographic features. 
-            The solution enables proactive customer retention through data-driven marketing strategies.
-        </p>
-
-        <div class="technical-solution">
-            <h5>Technical Solution</h5>
-            <div class="tech-tags">
-                <div class="tech-tag">Python</div>
-                <div class="tech-tag">Pandas</div>
-                <div class="tech-tag">NumPy</div>
-                <div class="tech-tag">Scikit-learn</div>
-            </div>
-            <div class="tech-tags">
-                <div class="tech-tag">LightGBM</div>
-                <div class="tech-tag">EDA</div>
-                <div class="tech-tag">Feature Engineering</div>
-                <div class="tech-tag">Cross-Validation</div>
-                <div class="tech-tag">ROC-AUC</div>
-            </div>
-        </div>
-
-        <div class="results-box">
-            <strong>Results:</strong>
             <p>
-                Achieved a <strong>ROC-AUC of 0.93</strong> using a LightGBM model, demonstrating strong predictive performance. 
-                Identified key churn drivers such as contract type, tenure, and lack of support services. 
-                The model enables early detection of high-risk customers, supporting targeted retention strategies 
-                and improving customer lifetime value.
+                I have a background in Mechatronics Engineering with experience in
+                automation, robotics, and intelligent systems. Recently, I have focused
+                on Data Science and Data Engineering, building machine learning models,
+                ETL pipelines, and cloud-based solutions.
             </p>
+
+            <p>
+                My goal is to combine engineering thinking with analytics and software
+                development to create scalable and impactful solutions.
+            </p>
+
         </div>
 
-        <a href="https://github.com/Dominguez22/customer-churn-prediction-ds/tree/main" class="view-project-link">View Project →</a>
-    </div>
-</div>
+    </section>
 
-            <!-- Project 2 -->
-            <div class="featured-project-card">
-                <div class="project-header">
-                    <h3>End-to-End Data Engineering Project (Airflow, Docker, PostgreSQL)</h3>
-                </div>
-                <div class="project-body">
+    <!-- SKILLS -->
+
+    <section id="skills">
+
+        <h2>Technical Skills</h2>
+
+        <p class="section-subtitle">
+            Technologies and tools I use
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>Python, SQL, Git, REST APIs</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Science</h3>
+                <p>Pandas, NumPy, Scikit-learn, XGBoost, NLP, Machine Learning</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Data Engineering</h3>
+                <p>AWS, ETL Pipelines, Airflow, Docker, PostgreSQL</p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Tools</h3>
+                <p>GitHub, VS Code, Jupyter Notebook, Excel</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <h2>Featured Projects</h2>
+
+        <p class="section-subtitle">
+            Machine learning and data engineering projects
+        </p>
+
+        <div class="projects-grid">
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-content">
+
+                    <h3>Customer Churn Prediction</h3>
+
                     <p>
-                        Designed and orchestrated a complete ETL pipeline using Apache Airflow and Docker, ingesting 
-                        real-time cryptocurrency data from the CoinGecko API and storing it for downstream analytics.
+                        Built a machine learning model to predict customer churn using
+                        customer behavior and service usage data.
                     </p>
 
-                    <div class="technical-solution">
-                        <h5>Technical Solution</h5>
-                        <div class="tech-tags">
-                            <div class="tech-tag">Apache Airflow</div>
-                            <div class="tech-tag">Docker</div>
-                            <div class="tech-tag">PostgreSQL</div>
-                            <div class="tech-tag">Python</div>
-                        </div>
-                        <div class="tech-tags">
-                            <div class="tech-tag">CoinGecko API</div>
-                            <div class="tech-tag">Data Transformation</div>
-                            <div class="tech-tag">Workflow Automation</div>
-                        </div>
+                    <div class="tags">
+                        <div class="tag">Python</div>
+                        <div class="tag">Scikit-learn</div>
+                        <div class="tag">LightGBM</div>
+                        <div class="tag">EDA</div>
                     </div>
 
-                    <div class="results-box">
-                        <strong>Results:</strong>
-                        <p>
-                            Implemented workflow automation, data validation, and modular pipeline design to ensure 
-                            scalability and reliability. Pipeline processes real-time data with automated error handling 
-                            and monitoring. Ready for integration with analytics dashboards and ML models.
-                        </p>
-                    </div>
+                    <a href="https://github.com/Dominguez22/customer-churn-prediction-ds/tree/main"
+                    target="_blank"
+                    class="project-link">
+                    View Project →
+                    </a>
 
-                    <a href="https://github.com/Dominguez22/airflow-crypto-pipeline" class="view-project-link">View Project →</a>
                 </div>
+
             </div>
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-content">
+
+                    <h3>Airflow Crypto ETL Pipeline</h3>
+
+                    <p>
+                        Developed an end-to-end ETL pipeline using Apache Airflow,
+                        Docker, PostgreSQL, and CoinGecko API.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">Airflow</div>
+                        <div class="tag">Docker</div>
+                        <div class="tag">PostgreSQL</div>
+                        <div class="tag">AWS</div>
+                    </div>
+
+                    <a href="https://github.com/Dominguez22/airflow-crypto-pipeline"
+                    target="_blank"
+                    class="project-link">
+                    View Project →
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
+
     </section>
 
-    <!-- PROFESSIONAL EXPERIENCE -->
+    <!-- EXPERIENCE -->
+
     <section id="experience">
-        <h2>Professional Experience</h2>
 
-        <div class="experience-container">
-            <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="experience-item">
-                    <div class="experience-date">Aug 2025 - Feb 2026</div>
-                    <div class="experience-content">
-                        <h4>Data Engineering Project (AWS – QA Automation)</h4>
-                        <p class="company">asTech - Driven by Repairify</p>
-                        <ul>
-                            <li>Designed serverless data validation pipeline on AWS</li>
-                            <li>Processed semi-structured JSON data from Snowflake and Amazon S3</li>
-                            <li>Developed AWS Lambda functions for data filtering, transformation, and preparation</li>
-                            <li>Orchestrated workflows using AWS Step Functions (state machines)</li>
-                            <li>Integrated Amazon Bedrock for AI-driven validation</li>
-                            <li>Improved data quality, traceability, and reduced manual review effort</li>
-                        </ul>
-                    </div>
-                </div>
+        <h2>Experience</h2>
 
-                <!-- Experience 2 -->
-                <div class="experience-item">
-                    <div class="experience-date">Mar 2024 - Present</div>
-                    <div class="experience-content">
-                        <h4>Automotive Diagnostic Engineer</h4>
-                        <p class="company">asTech - Driven by Repairify</p>
-                        <ul>
-                            <li>Performed data-driven fault analysis on automotive systems.</li>
-                            <li>Improved issue resolution efficiency using diagnostic data.</li>
-                            <li>Collaborated with teams across US and Canada on technical operations.</li>
-                        </ul>
-                    </div>
-                </div>
+        <p class="section-subtitle">
+            Professional and technical background
+        </p>
 
-                <!-- Experience 3 -->
-                <div class="experience-item">
-                    <div class="experience-date">2024 - Present</div>
-                    <div class="experience-content">
-                        <h4>Data Science Trainee</h4>
-                        <p class="company">TripleTen Bootcamp</p>
-                        <ul>
-                            <li>Developed machine learning projects focused on customer churn and demand prediction</li>
-                            <li>Applied Python, SQL, and data visualization tools for actionable insights</li>
-                            <li>Collaborated on projects simulating real business analytics scenarios</li>
-                            <li>Implemented feature engineering, model training, and hyperparameter optimization</li>
-                            <li>Practiced NLP and sentiment analysis on unstructured data</li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="experience-box">
 
-                <!-- Experience 4 -->
-                <div class="experience-item">
-                    <div class="experience-date">Jan 2023 - Dec 2023</div>
-                    <div class="experience-content">
-                        <h4>Engineering Intern</h4>
-                        <p class="company">Centro de Innovación Industrial en Inteligencia Artificial (CII.IA)</p>
-                        <ul>
-                            <li>Developed Python scripts integrated with RoboDK for robotic control</li>
-                            <li>Implemented computer vision models for object detection and classification</li>
-                            <li>Automated industrial processes using PLCs and sensors in manufacturing cell</li>
-                            <li>Contributed to integration of mechanical, electronic, and software systems</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="experience-item">
+
+                <div class="date">2025 - Present</div>
+
+                <h3>Data Engineering Project – AWS QA Automation</h3>
+
+                <p>
+                    Developed serverless AWS workflows for data validation using
+                    Lambda, Step Functions, Snowflake, and Amazon Bedrock.
+                </p>
+
             </div>
+
+            <div class="experience-item">
+
+                <div class="date">2024 - Present</div>
+
+                <h3>Automotive Diagnostic Engineer</h3>
+
+                <p>
+                    Performed diagnostic analysis and troubleshooting for automotive
+                    systems while collaborating with international technical teams.
+                </p>
+
+            </div>
+
+            <div class="experience-item">
+
+                <div class="date">2023</div>
+
+                <h3>Engineering Intern – Robotics & Automation</h3>
+
+                <p>
+                    Developed Python scripts integrated with RoboDK and participated
+                    in automation projects involving PLCs, sensors, and computer vision.
+                </p>
+
+            </div>
+
         </div>
+
     </section>
 
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT -->
+
     <section id="contact">
+
         <h2>Contact</h2>
 
-        <div class="contact-info">
-            <div class="contact-item">
-                <strong>Email:</strong>
-                <a href="mailto:mauricio.dmz22@gmail.com">mauricio.dmz22@gmail.com</a>
-            </div>
+        <div class="contact-box">
 
-            <div class="contact-item">
-                <strong>GitHub:</strong>
-                <a href="https://github.com/Dominguez22" target="_blank">github.com/Dominguez22</a>
-            </div>
+            <p>Email: mauricio.dmz22@gmail.com</p>
 
-            <div class="contact-item">
-                <strong>LinkedIn:</strong>
-                <a href="https://linkedin.com/in/dominguez22" target="_blank">linkedin.com/in/dominguez22</a>
-            </div>
+            <p>
+                GitHub:
+                <a href="https://github.com/Dominguez22" target="_blank">
+                    github.com/Dominguez22
+                </a>
+            </p>
+
+            <p>
+                LinkedIn:
+                <a href="https://www.linkedin.com/in/mauricio-domínguez-palacios-aa978521a/" target="_blank">
+                    https://www.linkedin.com/in/
+                </a>
+            </p>
+
         </div>
+
     </section>
 
     <!-- FOOTER -->
-    <footer>
-        <p>© 2026 Mauricio Dominguez Palacios | Data Science & Engineering Portfolio</p>
-    </footer>
 
-    <script>
-        // Fetch and display GitHub projects
-        fetch("https://api.github.com/users/Dominguez22/repos")
-            .then(response => response.json())
-            .then(data => {
-                // Projects are now displayed in the featured projects section
-                // This script can be expanded for additional functionality
-                console.log("Portfolio loaded successfully");
-            })
-            .catch(error => console.log("Error loading GitHub data:", error));
-    </script>
+    <footer>
+
+        <p>
+            © 2026 Mauricio Dominguez Palacios | Data Portfolio
+        </p>
+
+    </footer>
 
 </body>
 
